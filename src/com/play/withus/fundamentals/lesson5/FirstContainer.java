@@ -6,15 +6,17 @@ public class FirstContainer {
         //declare and initialize
         String[] items = {"Shirt", "Trousers", "Scarf"};
 
-        //another way
+        //another way and first hint that the compiler can be stupid
+        //we are doing some booking here
         int[] stocks = new int[3];
         stocks[0] = 12;
         stocks[1] = 133;
-        stocks[2]  =  32;
-        // stock[3] = 23; compiler is NOT STOPPING US
+        stocks[2] = 32;
+        // java.lang.ArrayIndexOutOfBoundsException
+        // stocks[3] = 23; //compiler is NOT STOPPING US !!!
 
-        for (int i = 0; i < items.length ; i++) {
-            System.out.println("item " + (i + 1)); // possible bug without brackets
+        for (int i = 0; i < items.length; i++) {
+            System.out.println("item " + (i + 1)); //  bug without brackets !!!
             System.out.println(items[i]);
         }
 
@@ -25,13 +27,12 @@ public class FirstContainer {
         }
 
         //fixed length(size)
-        // we cannot add a new element to an old array
+        // we extend an old array (there are no ops for that)
 
         // getting out
-
-        for (int k: stocks) {
+        for (int k : stocks) {
             System.out.println("stocks: " + k);
-            if(k == 133){
+            if (k == 133) {
                 System.out.println("going out");
                 break;
             }

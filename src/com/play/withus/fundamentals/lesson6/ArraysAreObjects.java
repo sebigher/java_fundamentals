@@ -26,19 +26,20 @@ public class ArraysAreObjects {
         //aka we cannot write
         int[] sj;
         //sj = {2,3}; //compiler error:
-        // array initializer is not allowed herer
+        // array initializer is not allowed here
 
-        //arrays of primitives(!!!) elements are located in memory
-        // in HEAP, one after another
+        // by comparison: simple primitive types are stored in STACK !!!
+        //BUT an array of primitives(!!!) is located in HEAP
+        // the elements of an array of primitives are stored one after another
         // so, the array reference knows about
         // the first element address
-        // primitive types are stored in STACK
+
 
         // arrays of objects are something else
 
         int s = 12; //STACK
-        int[] sumOfAllEvils; //STACK
-        sumOfAllEvils = new int[3]; //HEAP
+        int[] sumOfAllEvils; //STACK as it is a reference
+        sumOfAllEvils = new int[3]; //HEAP as it's an object
 
 
     }

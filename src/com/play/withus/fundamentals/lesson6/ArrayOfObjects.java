@@ -8,14 +8,12 @@ public class ArrayOfObjects {
         // referencing an Item object from HEAP
 
 
-        Item[] items = {item, new Item()};
+        Item[] items = {item, new Item()}; // basically it's an array of references
         // items reference is still in STACK
         // can reference only one address
         // but at this address there is a table
         // with the addresses of all the objects
         // located one after another
-
-
     }
 }
 
