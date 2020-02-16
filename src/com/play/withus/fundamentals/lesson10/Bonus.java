@@ -1,8 +1,5 @@
 package com.play.withus.fundamentals.lesson10;
 
-/**
- * @author oracle
- */
 
 public enum Bonus {
 
